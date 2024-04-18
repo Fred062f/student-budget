@@ -3,6 +3,7 @@ package com.example.student_budget
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,7 +31,7 @@ fun HomeScreen(navController: NavController) {
                 .background(Color.LightGray)
         ) {
             Text(
-                text = "First Sector",
+                text = "Hej Frederik",
                 modifier = Modifier.align(Alignment.Center)
             )
         }
@@ -73,6 +74,31 @@ fun HomeScreen(navController: NavController) {
                 .padding(8.dp)
                 .shadow(4.dp, RoundedCornerShape(8.dp))
         )
+        // Navigation Bar
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
+                .height(56.dp)
+                .background(Color.Gray)
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.Bottom
+        ) {
+            // Buttons for navigation
+            Button(onClick = { /* TODO: Go to Home Screen */ }) {
+                Text("Home")
+            }
+            Button(onClick = { navController.navigate("screen2") }) {
+                Text("Numbers")
+            }
+            Button(onClick = { /* TODO: Go to Goals Screen */ }) {
+                Text("Goals")
+            }
+            Button(onClick = { /* TODO: Go to Tips Screen */ }) {
+                Text("Tips")
+            }
+        }
     }
 }
 
