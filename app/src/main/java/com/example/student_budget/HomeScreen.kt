@@ -61,7 +61,9 @@ fun HomeScreen(navController: NavController) {
                 .background(Color.White)
                 .padding(8.dp)
                 .shadow(4.dp, RoundedCornerShape(8.dp))
-        )
+        ) {
+            Text("Indkomst")
+        }
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -69,13 +71,12 @@ fun HomeScreen(navController: NavController) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp)
-                .background(Color.LightGray)
+                .height(100.dp)
+                .background(Color.White)
+                .padding(8.dp)
+                .shadow(4.dp, RoundedCornerShape(8.dp))
         ) {
-            Text(
-                text = "Third Sector",
-                modifier = Modifier.align(Alignment.Center)
-            )
+            Text("Udgifter")
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -88,7 +89,10 @@ fun HomeScreen(navController: NavController) {
                 .background(Color.White)
                 .padding(8.dp)
                 .shadow(4.dp, RoundedCornerShape(8.dp))
-        )
+        ) {
+            Text("Til rådighed")
+        }
+
         // Spacer to push navigation bar to the bottom
         Spacer(modifier = Modifier.weight(1f))
         // Navigation Bar
