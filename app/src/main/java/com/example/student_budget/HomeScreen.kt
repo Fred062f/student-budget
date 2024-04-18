@@ -9,8 +9,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.student_budget.ui.theme.StudentbudgetTheme
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -70,5 +73,13 @@ fun HomeScreen(navController: NavController) {
                 .padding(8.dp)
                 .shadow(4.dp, RoundedCornerShape(8.dp))
         )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HomeScreenPreview() {
+    StudentbudgetTheme {
+        HomeScreen(navController = rememberNavController())
     }
 }
